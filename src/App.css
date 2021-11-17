@@ -1,38 +1,36 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+EAN13+Text&family=Odibee+Sans&family=Squada+One&family=Zen+Dots&display=swap');
+
+body{
+  margin: none;
+  padding: none;
+  box-sizing: border-box;  font-family: 'Cute Font', cursive;
+  font-size: 22px;
+}
+
+.App{
+  background-color: #1B212C;
+  width: 100vw;
+  height: 100vh; 
+
+}
+
+.text-light{
+  color: #ffd6ae !important; 
+}
+nav div img{
+  border-radius: 50%;
+}
+i{
+  color: rgb(189, 61, 61);
+  color: #ffd6ae;
+  font-size: 14px !important;
+}
+
+h1{
+  width: 100%;
+  position: absolute;
+  top: 40%;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #f64b29;
+  font-size: 70px;
 }
