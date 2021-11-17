@@ -3,7 +3,8 @@
 body{
   margin: none;
   padding: none;
-  box-sizing: border-box;  font-family: 'Cute Font', cursive;
+  box-sizing: border-box;  
+  font-family: 'Cute Font', cursive;
   font-size: 22px;
 }
 
@@ -11,7 +12,6 @@ body{
   background-color: #1B212C;
   width: 100vw;
   height: 100vh; 
-
 }
 
 .text-light{
@@ -26,11 +26,24 @@ i{
   font-size: 14px !important;
 }
 
-h1{
+.name{
   width: 100%;
   position: absolute;
   top: 40%;
   text-align: center;
   color: #f64b29;
   font-size: 70px;
+}
+h2{
+  color: green;
+}
+
+
+
+.cont{
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(192, 101, 101);
+  position: absolute;
+  top: 0;
 }

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const Parallax = () => {
 
-
-
     return (
         <>
-            <div className="App">
+            
                 <nav class="navbar navbar-expand-lg navbar-light ">
                     <div class="container-fluid">
                         <img
@@ -23,10 +21,9 @@ const Parallax = () => {
                                     <a class="nav-link active text-light" aria-current="page" href="#t">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="#t">Projects</a>
+                                    <a class="nav-link text-light" href="#t">projects</a>
                                 </li>
                             </ul>
-
 
                             <form class="d-flex w-25 justify-content-center">
                                 <i class="fa fa-phone " aria-hidden="true"></i
@@ -43,10 +40,7 @@ const Parallax = () => {
                     </div>
                 </nav>
 
-                <h1>DHEERAJ GUPTA</h1>
-
-
-            </div>
+          
         </>
     )
 }
