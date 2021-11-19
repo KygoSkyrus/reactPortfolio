@@ -1,8 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import data from './Data';
 
 const MernProject = () => {
+
+    let arr=[];
+
+    useEffect(() => {
+        arr = Array.from(document.getElementsByClassName('c'));//converting HTMLcollection prototype into array
+        arr.map(x=>x.addEventListener('mouseenter',function(){
+            x.classList.toggle('applyflip');
+        }));
+        arr.map(x=>x.addEventListener('mouseleave',function(){
+            x.classList.toggle('applyflip');
+        }));
+    }, [])
+
     return (
         <div className=" cont">
             <div className='container '>
@@ -14,16 +27,17 @@ const MernProject = () => {
                     <Link to="/"><i className="fa fa-home"></i></Link>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-4 g-4 mb-3 mt-3">
-                    {data.mern.map(x => <div class="col">
-                        <div class="card h-100">
-                            <img src={x.pic} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h3 class="card-title">{x.name}</h3>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div className="row row-cols-1 row-cols-md-4 g-4 mb-3 mt-3">
+                    {data.mern.map(x =>
+                        <div className="col c" id="c1" key={x.id}>
+                            <div className="card h-100 content">
+                                <img src={x.pic} className="card-img-top cardFront" alt="..." />
+                                <div className=" cardBack">
+                                    <h3 className="card-title">{x.name}</h3>
+                                    <p className="card-text">This is a longer card wi th shis is a longer card wi th supportinhis is a longer card wi th supportinhis is a longer card wi th supportinupporting te</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>)}
+                        </div>)}
                 </div>
 
             </div>
