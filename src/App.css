@@ -1,205 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+EAN13+Text&family=Odibee+Sans&family=Squada+One&family=Zen+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+EAN13+Text&family=Odibee+Sans&family=Squada+One&family=Zen+Dots&display=swap");
 
-body{
-  margin: none;
-  padding: none;
-  box-sizing: border-box;  
-  font-family: 'Cute Font', cursive;
-  font-size: 22px;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cute Font", cursive;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 
-.App{
-  background-color: #1B212C;
+.App {
+  background-color: #1b212c;
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
 }
 
-.text-light{
-  color: #ffd6ae !important; 
+.text-light {
+  color: #ffd6ae !important;
 }
-nav div img{
+nav div img {
   border-radius: 50%;
 }
-i{
+i {
   color: rgb(189, 61, 61);
   color: #ffd6ae;
   font-size: 14px !important;
 }
 
-.name{
+.name {
   width: 100%;
   position: absolute;
   top: 40%;
   text-align: center;
   color: #f64b29;
-  font-size: 70px;
+  font-size: 80px;
 }
-h2{
+h2 {
   color: green;
 }
 
-
-
-.cont{
+.cont {
   min-height: 100vh;
   min-width: 100vw;
   background-color: rgb(192, 101, 101);
   position: absolute;
   top: 0;
+  box-sizing: border-box;
+}
+
+.container div i{
+  font-size: 30px !important;
 }
 
 
+/*------------------flip animation-----------------*/
 
-
-.c{
-	perspective: 1000px;
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
-	-o-perspective: 1000px;
-	-ms-perspective: 1000px;
-	width:320px;
-	height:243px;
-	position:relative;
-	display:block;
-	font-size:25px;
-    font-weight:bold;
+.c {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  -ms-perspective: 1000px;
+  height: 243px;
+  position: relative;
+  display: block;
 }
 
 .c .content {
-	transition: 0.5s ease-out;
-	-webkit-transition: 0.5s ease-out;
-	-moz-transition: 0.5s ease-out;
-	-o-transition: 0.5s ease-out;
-	-ms-transition: 0.5s ease-out;
-	transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-
-	/* content backface is visible so that static content still appears */
-	backface-visibility: visible;
-	-webkit-backface-visibility: visible;
-	-moz-backface-visibility: visible;
-	-o-backface-visibility: visible;
-	-ms-backface-visibility: visible;
-
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
   
-	position:relative;
-	width: 100%;
-	height: 100%;
-	
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .c.applyflip .content {
-	transform: rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-	-o-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
-}
-
-
-.c .content .cardStatic {
-	/* Half way through the card flip, rotate static content to 0 degrees */
-	transition: 0s linear 0.17s;
-	-webkit-transition: 0s linear 0.17s;
-	-moz-transition: 0s linear 0.17s;
-	-o-transition: 0s linear 0.17s;
-	-ms-transition: 0s linear 0.17s;
-	transform: rotateY(0deg);
-	-webkit-transform: rotateY(0deg);
-	-moz-transform: rotateY(0deg);
-	-o-transform: rotateY(0deg);
-	-ms-transform: rotateY(0deg);
-
-	text-align: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 0;
-	width: 100%;
-	line-height:100px;
-}
-
-.c.applyflip .content .cardStatic {
-	/* Half way through the card flip, rotate static content to -180 degrees -- to negate the flip and unmirror the static content */
-	transition: 0s linear 0.17s;
-	-webkit-transition: 0s linear 0.17s;
-	-moz-transition: 0s linear 0.17s;
-	-o-transition: 0s linear 0.17s;
-	-ms-transition: 0s linear 0.17s;
-	transform: rotateY(-180deg);
-	-webkit-transform: rotateY(-180deg);
-	-moz-transform: rotateY(-180deg);
-	-o-transform: rotateY(-180deg);
-	-ms-transform: rotateY(-180deg);
-}
-
-.c .content .cardFront {
-    color: tomato;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(540deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .c .content .cardBack {
-    color: skyblue;
+  color: skyblue;
+  font-size: 14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.c .content .cardFront, .c .content .cardBack {
-	/* Backface visibility works great for all but IE. As such, we mark the backface visible in IE and manage visibility ourselves */
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	-ms-backface-visibility: visible;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	text-align: center;
-	line-height:200px;
-    border-radius: 14px;
-}
-.c .content .cardFront, .c.applyflip .content .cardFront {
-	transform: rotateY(0deg);
-	-webkit-transform: rotateY(0deg);
-	-moz-transform: rotateY(0deg);
-	-o-transform: rotateY(0deg);
-	-ms-transform: rotateY(0deg);
+.c .content .cardFront,
+.c .content .cardBack {
+  /* Backface visibility works great for all but IE. As such, we mark the backface visible in IE and manage visibility ourselves */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
-.c .content .cardBack, .c.applyflip .content .cardBack {
-	transform: rotateY(-180deg);
-	-webkit-transform: rotateY(-180deg);
-	-moz-transform: rotateY(-180deg);
-	-o-transform: rotateY(-180deg);
-	-ms-transform: rotateY(-180deg);
-}
-
-.c .content .cardFront, .c.applyflip .content .cardBack {
-	/* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
-	animation: stayvisible 0.5s both;
-	-webkit-animation: stayvisible 0.5s both;
-	-moz-animation: stayvisible 0.5s both;
-	-o-animation: stayvisible 0.5s both;
-	-ms-animation: donothing 0.5s;
-	-ms-transition: visibility 0s linear 0.17s;
-	visibility: visible;
-}
-.c.applyflip .content .cardFront, .c .content .cardBack {
-	/* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
-	animation: stayvisible 0.5s both;
-	-webkit-animation: stayvisible 0.5s both;
-	-moz-animation: stayvisible 0.5s both;
-	-o-animation: stayvisible 0.5s both;
-	-ms-animation: donothing 0.5s;
-	-ms-transition: visibility 0s linear 0.17s;
-	visibility: hidden;
-}
-@keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
-@-webkit-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
-@-moz-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
-@-o-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
-@-ms-keyframes donothing { 0% { } 100% { } }
 
 
 
+
+.cardFront img{
+  height: 207px;
+}
+.c .content .cardFront,
+.c.applyflip .content .cardFront {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+}
+
+.c .content .cardBack,
+.c.applyflip .content .cardBack {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+}
+
+.c .content .cardFront,
+.c.applyflip .content .cardBack {
+  /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+  animation: stayvisible 0.5s both;
+  -webkit-animation: stayvisible 0.5s both;
+  -moz-animation: stayvisible 0.5s both;
+  -o-animation: stayvisible 0.5s both;
+  -ms-animation: donothing 0.5s;
+  -ms-transition: visibility 0s linear 0.17s;
+  visibility: visible;
+}
+.c .content .cardBack,
+.c.applyflip .content .cardFront {
+  /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+  animation: stayvisible 0.5s both;
+  -webkit-animation: stayvisible 0.5s both;
+  -moz-animation: stayvisible 0.5s both;
+  -o-animation: stayvisible 0.5s both;
+  -ms-animation: donothing 0.5s;
+  -ms-transition: visibility 0s linear 0.17s;
+  visibility: hidden;
+}
+@keyframes stayvisible {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@-webkit-keyframes stayvisible {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@-moz-keyframes stayvisible {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@-o-keyframes stayvisible {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}

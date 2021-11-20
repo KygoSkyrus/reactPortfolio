@@ -18,16 +18,16 @@ const MernProject = () => {
 
     return (
         <div className=" cont">
+            <h1>mern projects</h1>
             <div className='container '>
-                <h1>mern projects</h1>
-
+                
                 <div className="w-25 d-flex justify-content-between">
                     <Link to="/react"><i className="fab fa-react"></i></Link>
                     <Link to="/js"><i className="fab fa-js"></i></Link>
                     <Link to="/"><i className="fa fa-home"></i></Link>
                 </div>
 
-                <div className="row row-cols-1 row-cols-md-4 g-4 mb-3 mt-3">
+                <div className="row row-cols-1 row-cols-md-4 g-4 mb-5 mt-5">
                     {data.mern.map(x =>
                         <div className="col c" id="c1" key={x.id}>
                             <div className="card h-100 content">
