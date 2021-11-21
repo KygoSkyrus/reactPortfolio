@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   font-family: "Cute Font", cursive;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -16,41 +16,50 @@ body::-webkit-scrollbar{
   height: 100vh;
 }
 
-ul{
+/*e.g. HOME, PROJECTS*/
+ul {
   font-size: 22px;
 }
 .color {
   color: #1b212c !important;
 }
 
+
+/* .nav{
+  background-color: #ffd6ae !important;
+} */
+
 nav div img {
   border-radius: 50%;
 }
 i {
-  color: rgb(189, 61, 61);
   color: #ffd6ae;
   color: #1b212c;
   font-size: 14px !important;
 }
-.navbar-brand{
-  margin-left: 20px;
+.navbar-brand {
+  margin-left: 10px;
 }
-form{
+
+/*for the icons in the main nav*/
+form {
   width: 180px;
   margin-right: 20px;
 }
-.center{
+
+/*name and profession*/
+.center {
   width: 100%;
   position: absolute;
   top: 40%;
-  text-align: center; 
+  text-align: center;
   line-height: 40px;
 }
 .name {
   font-size: 80px;
   color: #f64b29;
 }
-.profession{
+.profession {
   font-size: 22px;
   letter-spacing: 23px;
   padding-left: 22px;
@@ -58,22 +67,111 @@ form{
 }
 
 
+/***************** hamburger icon *********************/
+.ul {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.ul .li {
+  list-style: none;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 4px;
+  border-radius: 8px;
+  background: #262626;
+  transition: 1s;
+}
+.ul .li:nth-of-type(1) {
+  width: 55%;
+  top: 35%;
+  left: 15%;
+  transition-delay: 1s;
+  opacity: 1;
+}
+.ul .li:nth-of-type(2) {
+  top: 50%;
+  left: 15%;
+  transition-delay: 0s;
+}
+.ul .li:nth-of-type(3) {
+  width: 55%;
+  top: 65%;
+  left: 15%;
+  transition-delay: 1s;
+  opacity: 1;
+}
+.ul.active .li:nth-of-type(1) {
+  left: 100%;
+  transition-delay: 0s;
+  opacity: 0;
+}
+.ul.active .li:nth-of-type(2) {
+  transform: translateY(-50%) rotate(405deg);
+  transition-delay: 0.5s;
+}
+.ul.active .li:nth-of-type(3) {
+  right: 100%;
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+.ul .li:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  transform: rotate(90deg);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.ul.active .li:nth-of-type(2)::before {
+  top: 0;
+  transition-delay: 1s;
+}
+
+/*project area*/
 .cont {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: rgb(192, 101, 101);
+  background-color: #1b212c;
   position: absolute;
   top: 0;
   box-sizing: border-box;
 }
-
-.container div i{
-  font-size: 30px !important;
+.project-nav {
+}
+.project-nav img {
+  border-radius: 50%;
+}
+.project-icons {
+  width: 170px;
+}
+.project-icons .blue{
+  color: rgb(42, 175, 164);
+}
+.project-icons .green{
+  color: rgb(19, 133, 38);
+}
+.project-icons .yellow{
+  color: rgb(233, 230, 43);
+}
+.cont div h1 {
+  color: #f64b29;
+}
+.cont div i {
+  font-size: 18px !important;
+  color: #1b212c;
 }
 
-
 /*------------------flip animation-----------------*/
-
 .c {
   perspective: 1000px;
   -webkit-perspective: 1000px;
@@ -84,8 +182,8 @@ form{
   position: relative;
   display: block;
 }
-.c a{
-  color: black;
+.c a {
+  color: #1b212c;
 }
 .c .content {
   transition: 0.5s ease-out;
@@ -93,7 +191,7 @@ form{
   -moz-transition: 0.5s ease-out;
   -o-transition: 0.5s ease-out;
   -ms-transition: 0.5s ease-out;
-  
+
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -104,7 +202,6 @@ form{
   width: 100%;
   height: 100%;
   /* box-shadow: 0 0 20px; */
-
 }
 
 .c.applyflip .content {
@@ -118,7 +215,7 @@ form{
 .c .content .cardBack {
   color: skyblue;
   font-size: 14px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .c .content .cardFront,
@@ -129,7 +226,7 @@ form{
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   -ms-backface-visibility: visible;
-  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -138,11 +235,7 @@ form{
   text-align: center;
 }
 
-
-
-
-
-.cardFront img{
+.cardFront img {
   height: 207px;
   border: 1px solid black;
 }
@@ -217,4 +310,43 @@ form{
   to {
     visibility: visible;
   }
+}
+
+/* for the toggle icon**/
+@media (max-width: 990px) {
+
+  .navbar-brand {
+    margin-left: 0;
+  }
+
+  .holder {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 570px) {
+
+  .cont{
+  }
+  
+  .project-icons {
+    width: 120px;
+  }
+}
+
+/*for the name ont size on smaller screen*/
+@media (max-width: 440px){
+  .center {
+    line-height: 38px;
+  }
+  .name {
+    font-size: 65px;
+  }
+  .profession {
+    font-size: 20px;
+    letter-spacing: 18px;
+    padding-left: 18px;
+  }
+  
 }
