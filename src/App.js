@@ -14,15 +14,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        
-        <Navbar/>
 
-        <h1 className="name">DHEERAJ GUPTA</h1>
+        <Navbar />
+
+        <div className="center">
+          <section className="name">DHEERAJ GUPTA</section>
+          <section className="profession">WEB DEVELOPER</section>
+        </div>
 
         <Routes>
-          <Route path='/react' element={<ReactProject/>} />
-          <Route path='/js' element={<JsProject/>} />
-          <Route path='/mern' element={<MernProject/>} />
+          <Route path='/react' element={<ReactProject />} />
+          <Route path='/js' element={<JsProject />} />
+          <Route path='/mern' element={<MernProject />} />
         </Routes>
       </div>
     </Router>
