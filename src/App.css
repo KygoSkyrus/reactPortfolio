@@ -10,6 +10,21 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/*logo*/
+.mainlogo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b212c;
+  background-color: #dddddd;
+}
+.logo {
+  border-radius: 50%;
+}
+
+
 .App {
   background-color: #1b212c;
   width: 100vw;
@@ -23,7 +38,6 @@ ul {
 .color {
   color: #1b212c !important;
 }
-
 
 /* .nav{
   background-color: #ffd6ae !important;
@@ -65,7 +79,6 @@ form {
   padding-left: 22px;
   color: #ffd6ae;
 }
-
 
 /***************** hamburger icon *********************/
 .ul {
@@ -146,6 +159,16 @@ form {
   top: 0;
   box-sizing: border-box;
 }
+
+.mont {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #b4467d;
+  /* position: absolute;
+  top: 0;  */
+  box-sizing: border-box;
+}
+
 .project-nav {
 }
 .project-nav img {
@@ -154,13 +177,24 @@ form {
 .project-icons {
   width: 170px;
 }
-.project-icons .blue{
+/*for the background style of project-icons*/
+/* .project-icons a{
+  width: 45px;
+  height: 42px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  */
+
+.project-icons .blue {
   color: rgb(42, 175, 164);
 }
-.project-icons .green{
+.project-icons .green {
   color: rgb(19, 133, 38);
 }
-.project-icons .yellow{
+.project-icons .yellow {
   color: rgb(233, 230, 43);
 }
 .cont div h1 {
@@ -169,6 +203,13 @@ form {
 .cont div i {
   font-size: 18px !important;
   color: #1b212c;
+}
+
+#j {
+  display: none;
+}
+#m {
+  display: none;
 }
 
 /*------------------flip animation-----------------*/
@@ -314,7 +355,6 @@ form {
 
 /* for the toggle icon**/
 @media (max-width: 990px) {
-
   .navbar-brand {
     margin-left: 0;
   }
@@ -326,17 +366,16 @@ form {
 }
 
 @media (max-width: 570px) {
-
-  .cont{
+  .cont {
   }
-  
+
   .project-icons {
     width: 120px;
   }
 }
 
 /*for the name ont size on smaller screen*/
-@media (max-width: 440px){
+@media (max-width: 440px) {
   .center {
     line-height: 38px;
   }
@@ -348,5 +387,4 @@ form {
     letter-spacing: 18px;
     padding-left: 18px;
   }
-  
 }

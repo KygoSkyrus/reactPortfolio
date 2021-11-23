@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom';
 import data from './Data';
 
 
-const ReactProject = () => {
+export default function ReactProject () {
 
     let arr = [];
 
@@ -19,29 +18,12 @@ const ReactProject = () => {
 
 
     return (
-        <div className=" cont">
 
-            <div className="d-flex justify-content-between align-items-center px-4  mb-5 navbar bg-light project-nav">
-                <a href="/">
-                    <img
-                        src="https://thumbs.dreamstime.com/b/dg-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164905757.jpg"
-                        alt="logo"
-                        width="40px"
-                    />
-                </a>
-                <div className="d-flex justify-content-between project-icons">
-                    <Link to="/react" data-bs-toggle="tooltip" data-bs-placement="top" title="React projects"><i className="fab fa-react blue" ></i></Link>
-                    <Link to="/js" data-bs-toggle="tooltip" data-bs-placement="top" title="JavaScript projects"><i className="fab fa-js" ></i></Link>
-                    <Link to="/mern" data-bs-toggle="tooltip" data-bs-placement="top" title="Mern projects"><i className="fab fa-node"></i></Link>
-                    <Link to="/"><i className="fa fa-home"></i>
-                    </Link>
-                </div>
-            </div>
 
-            <div className="container">
+            <div className="container" id="r">
                 <div className="row row-cols-1 row-cols-md-4 g-4   mb-5 mt-3">
                     {data.react.map(x => <div className="col c" key={x.id}>
-                        <a href={x.link} target="_blank">
+                        <a href={x.link} target="_blank" rel="noreferrer">
                             <div className="card h-100 content">
                                 <div className="cardFront">
                                     <img src={x.pic} className="card-img-top" alt="..." />
@@ -55,8 +37,6 @@ const ReactProject = () => {
                     </div>)}
                 </div>
             </div >
-        </div>
     )
 }
 
-export default ReactProject

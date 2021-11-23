@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+export default function Navbar (){
 
     useEffect(() => {
         let component = document.querySelector('.ul');
@@ -11,17 +11,17 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light nav">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light nav" id="nav">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/">
                     <img
                         src="https://thumbs.dreamstime.com/b/dg-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164905757.jpg"
                         alt="logo"
                         width="40px"
                     />
-                </a>
+                </Link>
                 <section className="holder" >
-                    <ul className="ul navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <ul className="ul navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"  aria-label="Toggle navigation">
                         <li className="li"></li>
                         <li className="li"></li>
                         <li className="li"></li>
@@ -33,20 +33,20 @@ const Navbar = () => {
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react" className="nav-link color">Projects</Link>
+                            <Link to="/projects" className="nav-link color">Projects</Link>
                         </li>
                     </ul>
                     <form className="d-flex justify-content-between ">
-                        <a href="tel:8076806118" target="_blank">
+                        <a href="tel:8076806118" target="_blank" rel="noreferrer">
                             <i className="fa fa-phone " aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:kygoskyrus@gmail.com" target="_blank">
+                        <a href="mailto:kygoskyrus@gmail.com" target="_blank" rel="noreferrer">
                             <i className="fa fa-envelope " aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/KygoSkyrus" target="_blank">
+                        <a href="https://github.com/KygoSkyrus" target="_blank" rel="noreferrer">
                             <i className="fa fa-github " aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/dheeraj-gupta-a71145170" target="_blank">
+                        <a href="https://www.linkedin.com/in/dheeraj-gupta-a71145170" target="_blank" rel="noreferrer">
                             <i className="fa fa-linkedin " aria-hidden="true"></i>
                         </a>
                     </form>
@@ -56,4 +56,3 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
