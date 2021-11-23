@@ -6,6 +6,7 @@ export default function MernProject () {
     let arr = [];
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         arr = Array.from(document.getElementsByClassName('c'));//converting HTMLcollection prototype into array
         arr.map(x => x.addEventListener('mouseenter', function () {
             x.classList.toggle('applyflip');

@@ -6,6 +6,7 @@ export default function JsProject  () {
     let arr = [];
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         arr = Array.from(document.getElementsByClassName('c'));
         arr.map(x => x.addEventListener('mouseenter', function () {
             x.classList.toggle('applyflip');
