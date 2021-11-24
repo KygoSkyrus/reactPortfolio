@@ -28,7 +28,10 @@ export default function MernProject () {
                                 </div>
                                 <div className=" cardBack">
                                     <h3 className="card-title">{x.name}</h3>
-                                    <p className="card-text">This is a longer card wi th shis is a longer card wi th supportinhis is a longer card wi th supportinhis is a longer card wi th supportinupporting te</p>
+                                    <p className="card-text">{x.description}</p>
+                                    <a href={x.source} target="_blank" rel="noreferrer">
+                                    <button className="btn btn-outline-dark d-flex align-items-center">GITHUB&nbsp;<i className="fa fa-github"></i></button>
+                                </a>
                                 </div>
                             </div></a>
                     </div>)}
